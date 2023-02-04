@@ -1,0 +1,17 @@
+version: '2'
+services:
+  plex:
+    image: plexinc/pms-docker
+    container_name: plex
+    network_mode: 'host'
+    volumes:
+      - ./database:/config
+      - ./transcode/temp:/transcode
+      - /mnt/Movies-4K:/Movies-4K:ro
+      - /mnt/Movies:/Movies:ro
+      - /mnt/TV:/TV:ro
+      - /mnt/TV-Temp:/TV-Temp:ro
+    restart: 'always'
+    environment:
+      - TZ=Europe/London
+      - PLEX_CLAIM=claim-XXXXXXXXXXXXX
