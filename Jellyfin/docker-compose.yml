@@ -5,12 +5,12 @@ services:
     container_name: jellyfin
     network_mode: 'host'
     volumes:
-      - ./jellyfin/config:/config
-      - ./jellyfin/cache:/cache
-      - /mnt/Movies (4K):/Movies (4K):ro
+      - ./config:/config
+      - ./cache:/cache
+      - /mnt/Movies-4K:/Movies-4K:ro
       - /mnt/Movies:/Movies:ro
       - /mnt/TV:/TV:ro
-      - /mnt/TV (Temp):/TV (Temp):ro
+      - /mnt/TV-Temp:/TV-Temp:ro
     restart: 'always'
     # Optional - alternative address used for autodiscovery
     # environment:
