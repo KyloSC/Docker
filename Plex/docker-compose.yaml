@@ -7,10 +7,10 @@ services:
     volumes:
       - ./database:/config
       - ./transcode/temp:/transcode
-      - /mnt/Movies-4K:/Movies-4K:ro
-      - /mnt/Movies:/Movies:ro
-      - /mnt/TV:/TV:ro
-      - /mnt/TV-Temp:/TV-Temp:ro
+      - /mnt/media/Movies-4K:/Movies-4K:ro
+      - /mnt/media/Movies:/Movies:ro
+      - /mnt/media/TV:/TV:ro
+      - /mnt/media/TV-Temp:/TV-Temp:ro
     restart: 'always'
     environment:
       - TZ=Europe/London
